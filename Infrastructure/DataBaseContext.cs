@@ -8,7 +8,7 @@ using static Domin.Entities.Review_Optional_;
 
 namespace Infrastructure
 {
-    public class DataBaseContext
+    public class AppDbContext : DbContext 
     {
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
@@ -30,6 +30,11 @@ namespace Infrastructure
 
             // Apply configurations
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+        }
+
+        internal async Task SaveChangesAsync()
+        {
+            throw new NotImplementedException();
         }
     }
 }

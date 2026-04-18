@@ -16,13 +16,9 @@ namespace Application.Services
             _propertyRepository = propertyRepository;
         }
 
-        public async Task<Guid> CreatePropertyAsync(CreatePropertyDto dto)
+        public async Task CreatePropertyAsync(CreatePropertyDto dto)
         {
-            var property = new Property(dto.LandlordId, dto.Title, dto.Price);
-
-            await _propertyRepository.AddAsync(property);
-
-            return property.Id;
+            throw new NotImplementedException();
         }
 
         public async Task<IEnumerable<PropertyDto>> GetAllAsync()
@@ -33,8 +29,7 @@ namespace Application.Services
             {
                 Id = p.Id,
                 Title = p.Title,
-                Price = p.Price,
-                Status = p.Status
+               
             });
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domin.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -18,7 +19,7 @@ namespace Domin.Entities
 
         public UserRole Role { get; set; }
 
-        public UserStatus Status { get; set; } = UserStatus.ACTIVE;
+        public UserStatus Status { get; set; } = UserStatus.Active;
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 

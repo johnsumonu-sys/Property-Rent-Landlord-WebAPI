@@ -8,6 +8,7 @@ namespace Domin.Enums
     {
         ACTIVE,
         SUSPENDED,
-        DEACTIVATED
+        DEACTIVATED,
+        Active
     }
 }
